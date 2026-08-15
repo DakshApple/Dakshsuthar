@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Ask Daksh — Anything</title>
+<meta name="description" content="Ask Daksh anything about building, business, AI, or life at 17 running companies." />
+<meta name="theme-color" content="#0A0A0A" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav__logo">Daksh<em>Suthar</em></a>
+  <div class="nav__links">
+    <a href="work/">Work</a>
+    <a href="about.html">About</a>
+    <a href="journal/">Journal</a>
+    <a href="now.html">Now</a>
+  </div>
+  <div class="nav__right">
+    <a href="book.html" class="nav__book"><span>Book a call</span><span class="arrow">→</span></a>
+    <button class="nav__menu" onclick="toggleMenu()" aria-label="Menu">Menu</button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="work/" onclick="toggleMenu()">Work <em>01</em></a>
+  <a href="about.html" onclick="toggleMenu()">About <em>02</em></a>
+  <a href="journal/" onclick="toggleMenu()">Journal <em>03</em></a>
+  <a href="now.html" onclick="toggleMenu()">Now <em>04</em></a>
+  <a href="book.html" onclick="toggleMenu()">Book <em>05</em></a>
+</div>
+
+<section class="page-hero" id="top">
+  <div class="page-hero__label">Ask</div>
+  <h1 class="page-hero__title">Ask me<em>anything.</em></h1>
+  <p class="page-hero__sub">
+    Not a chatbot. Not a form. A single question box that sends your question straight to me. If yours is a good one, I'll answer it here or on Instagram — usually within the week.
+  </p>
+</section>
+
+<section class="section">
+  <div class="ask__wrap" id="askWrap">
+    <h2 class="ask__q">What do you want to know?</h2>
+    <p class="ask__sub">Building. Business. AI. Being 17 and running things. Ask what you actually want to know — vague questions get vague answers.</p>
+    <div class="ask__form">
+      <textarea id="askInput" placeholder="Type your question…" rows="3"></textarea>
+      <button class="ask__send" id="askSend">Send <span>→</span></button>
+    </div>
+    <input type="email" id="askEmail" placeholder="Your email (optional — for a private reply)" autocomplete="email" style="margin-top:16px;padding:14px 20px;border:1px solid var(--line-2);border-radius:999px;font-size:var(--s-2);color:var(--ink);background:transparent;transition:border-color .2s ease;width:100%;max-width:420px;display:block" />
+    <!-- Honeypot: bots fill hidden text fields, humans don't -->
+    <input type="text" name="ask_botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+    <div class="ask__examples">
+      <button class="ask__ex" onclick="fillAsk(this)">How do you find your first client?</button>
+      <button class="ask__ex" onclick="fillAsk(this)">Should I drop out?</button>
+      <button class="ask__ex" onclick="fillAsk(this)">How much does Genartml charge?</button>
+      <button class="ask__ex" onclick="fillAsk(this)">What's your daily routine?</button>
+      <button class="ask__ex" onclick="fillAsk(this)">How do you price AI work?</button>
+      <button class="ask__ex" onclick="fillAsk(this)">What tools do you actually use?</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-2)">
+  <div class="section__head reveal">
+    <div class="section__label">Previously answered</div>
+    <div class="section__label" style="color:var(--ink-2)">Selected questions</div>
+  </div>
+
+  <div style="max-width:720px;display:flex;flex-direction:column;gap:40px">
+    <div class="reveal">
+      <div style="font-family:var(--mono);font-size:var(--s-1);color:var(--ink-4);text-transform:uppercase;letter-spacing:.14em;margin-bottom:12px">Q · Aug 2026</div>
+      <div style="font-family:var(--serif);font-size:var(--s-4);color:var(--ink);margin-bottom:16px;letter-spacing:-0.01em">&ldquo;How do you land a client at 17 when nobody takes you seriously?&rdquo;</div>
+      <p style="color:var(--ink-2);line-height:1.7">Two things: <strong style="color:var(--ink)">specificity</strong> and <strong style="color:var(--ink)">receipts</strong>. Don't pitch &ldquo;AI automation&rdquo; — pitch &ldquo;I'll cut your appointment no-shows by 30% in six weeks using an SMS agent, or you don't pay.&rdquo; Show a demo you built in a day. Age evaporates when the work is undeniable.</p>
+    </div>
+    <div class="reveal">
+      <div style="font-family:var(--mono);font-size:var(--s-1);color:var(--ink-4);text-transform:uppercase;letter-spacing:.14em;margin-bottom:12px">Q · Jul 2026</div>
+      <div style="font-family:var(--serif);font-size:var(--s-4);color:var(--ink);margin-bottom:16px;letter-spacing:-0.01em">&ldquo;What's the biggest mistake young founders make?&rdquo;</div>
+      <p style="color:var(--ink-2);line-height:1.7">Building the wrong thing beautifully. If you spend six months polishing a product nobody's asked for, you've learned nothing except how to hide from customers. Ship the ugly version this week. Talk to the people who bought it. Then decide what's worth polishing.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__respect">
+    <span>You made it this far. Respect.</span>
+    <a href="#top" class="footer__up">↑ Back to the beginning</a>
+  </div>
+  <div class="footer__huge">Let's<br><em>build.</em></div>
+  <div class="footer__grid">
+    <div class="footer__col">
+      <div class="footer__mark">Daksh Suthar</div>
+      <div class="footer__tag">Founder · Builder · Thinker</div>
+      <div class="footer__tag" style="margin-top:8px">daksh@genartml.com</div>
+    </div>
+    <div class="footer__col"><h4>Site</h4><a href="work/">Work</a><a href="about.html">About</a><a href="journal/">Journal</a><a href="now.html">Now</a></div>
+    <div class="footer__col"><h4>Talk</h4><a href="book.html">Book a meeting</a><a href="ask.html">Ask a question</a><a href="contact.html">Speaking / invite</a><a href="contact.html">Partner with me</a></div>
+    <div class="footer__col"><h4>Elsewhere</h4><a href="https://linkedin.com/in/daksh-suthar" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://instagram.com/daksh.suthar" target="_blank" rel="noopener">Instagram ↗</a><a href="https://x.com/dakshsuthar" target="_blank" rel="noopener">X ↗</a><a href="https://youtube.com/@dakshsuthar" target="_blank" rel="noopener">YouTube ↗</a></div>
+  </div>
+  <div class="footer__base"><span>© 2026 Daksh Suthar</span><span>Handcrafted in Ahmedabad · Built to evolve</span></div>
+</footer>
+
+<div class="status" onclick="openCmd()"><span class="dot"></span><span>Building</span><span class="sep">·</span><span class="mo-hide"><span class="k">Now:</span> Extuter launch</span><span class="sep mo-hide">·</span><span id="statusClock">--:-- IST</span></div>
+<div class="kbd-hint">Try <kbd>⌘</kbd><kbd>K</kbd></div>
+
+<div class="cmd" id="cmd">
+  <div class="cmd__box">
+    <input class="cmd__input" id="cmdInput" placeholder="Search or jump to…" />
+    <div class="cmd__list" id="cmdList">
+      <a class="cmd__item" href="index.html"><div class="cmd__icon">H</div><div class="cmd__name">Home</div><div class="cmd__sub">Top</div></a>
+      <a class="cmd__item" href="work/"><div class="cmd__icon">W</div><div class="cmd__name">Work — all projects</div><div class="cmd__sub">01</div></a>
+      <a class="cmd__item" href="work/extuter.html"><div class="cmd__icon">E</div><div class="cmd__name">Extuter — launching soon</div><div class="cmd__sub">New</div></a>
+      <a class="cmd__item" href="work/genartml.html"><div class="cmd__icon">G</div><div class="cmd__name">Genartml — the studio</div><div class="cmd__sub">Live</div></a>
+      <a class="cmd__item" href="work/evoluter.html"><div class="cmd__icon">V</div><div class="cmd__name">Evoluter — UPSC prep</div><div class="cmd__sub">Beta</div></a>
+      <a class="cmd__item" href="about.html"><div class="cmd__icon">A</div><div class="cmd__name">About Daksh</div><div class="cmd__sub">02</div></a>
+      <a class="cmd__item" href="now.html"><div class="cmd__icon">N</div><div class="cmd__name">Right now</div><div class="cmd__sub">Live</div></a>
+      <a class="cmd__item" href="journal/"><div class="cmd__icon">J</div><div class="cmd__name">Journal</div><div class="cmd__sub">Inside my head</div></a>
+      <a class="cmd__item" href="book.html"><div class="cmd__icon">B</div><div class="cmd__name">Book a meeting</div><div class="cmd__sub">Calendar</div></a>
+      <a class="cmd__item" href="ask.html"><div class="cmd__icon">?</div><div class="cmd__name">Ask Daksh</div><div class="cmd__sub">Anything</div></a>
+      <a class="cmd__item" href="contact.html"><div class="cmd__icon">C</div><div class="cmd__name">Contact / Speaking</div><div class="cmd__sub">Direct</div></a>
+      <a class="cmd__item" href="mailto:daksh@genartml.com"><div class="cmd__icon">@</div><div class="cmd__name">Email Daksh</div><div class="cmd__sub">Mail</div></a>
+    </div>
+    <div class="cmd__foot"><span><kbd>↑</kbd><kbd>↓</kbd> Navigate</span><span><kbd>↵</kbd> Go</span><span><kbd>esc</kbd> Close</span></div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

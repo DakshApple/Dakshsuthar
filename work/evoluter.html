@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Evoluter — AI-powered UPSC prep</title>
+<meta name="description" content="Evoluter is an AI prep platform for UPSC aspirants — evaluation, feedback, and study loops that don't waste a candidate's evening." />
+<meta name="theme-color" content="#0A0A0A" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <a href="../index.html" class="nav__logo">Daksh<em>Suthar</em></a>
+  <div class="nav__links">
+    <a href="./" class="on">Work</a>
+    <a href="../about.html">About</a>
+    <a href="../journal/">Journal</a>
+    <a href="../now.html">Now</a>
+  </div>
+  <div class="nav__right">
+    <a href="../book.html" class="nav__book"><span>Book a call</span><span class="arrow">→</span></a>
+    <button class="nav__menu" onclick="toggleMenu()" aria-label="Menu">Menu</button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="./" onclick="toggleMenu()">Work <em>01</em></a>
+  <a href="../about.html" onclick="toggleMenu()">About <em>02</em></a>
+  <a href="../journal/" onclick="toggleMenu()">Journal <em>03</em></a>
+  <a href="../now.html" onclick="toggleMenu()">Now <em>04</em></a>
+  <a href="../book.html" onclick="toggleMenu()">Book <em>05</em></a>
+</div>
+
+<section class="page-hero" id="top">
+  <div class="page-hero__label">
+    <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--ink-2)"></span>
+    03 · In build · Product
+  </div>
+  <h1 class="page-hero__title">Evoluter.<em>Prep, without the noise.</em></h1>
+  <p class="page-hero__sub">
+    An AI-powered prep platform for UPSC aspirants — evaluation, feedback, and study loops that respect a candidate's time and don't waste their evening on scoring rubrics from 2011.
+  </p>
+</section>
+
+<section class="case">
+  <div class="case__wrap">
+
+    <div class="case__block reveal">
+      <div class="case__label">The problem</div>
+      <div class="case__body">
+        <p>UPSC prep is broken in a specific way. Aspirants write answers every week and wait <strong>10-14 days</strong> for feedback that's often two lines: &ldquo;expand more&rdquo;, &ldquo;good try&rdquo;. By the time they get it, they've written five more answers with the same mistakes.</p>
+        <p>The best mentors are expensive, few, and slow. Everyone else copies their format without their judgment.</p>
+      </div>
+    </div>
+
+    <div class="case__block reveal">
+      <div class="case__label">The insight</div>
+      <div class="case__body">
+        <p>LLMs are actually good at this now — not perfect, but consistently better than the median mentor when trained on UPSC toppers' scripts, syllabus context, and rubric depth.</p>
+        <p>The unlock isn't &ldquo;an AI that grades essays&rdquo;. It's <strong>an AI that grades essays the way a great mentor would — pointing to your specific weak muscles, in your specific paper, in under 90 seconds</strong>.</p>
+      </div>
+    </div>
+
+    <div class="case__block reveal">
+      <div class="case__label">What we're building</div>
+      <div class="case__body">
+        <ul>
+          <li><strong>Answer evaluation</strong> — submit a written answer, get a rubric-based score, breakdown by dimension, and a re-write suggestion in the aspirant's own voice.</li>
+          <li><strong>Weak-area tracking</strong> — over weeks, the platform learns your patterns and starts prescribing the exact chapters and answer types you need to drill.</li>
+          <li><strong>Mock interview module</strong> — voice-based, adaptive follow-ups, panel-style pressure.</li>
+          <li><strong>Prelims warm-up</strong> — daily current affairs quiz with reasoning, not just answer keys.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case__block reveal">
+      <div class="case__label">Status</div>
+      <div class="case__body">
+        <p>Currently in private beta with a cohort of aspirants across Delhi, Bangalore, and Hyderabad. Rebuilding the feedback engine this quarter based on what the beta showed us — the first version was too polite, so we're teaching it to be usefully harsh.</p>
+        <p>Public launch: after Extuter ships.</p>
+      </div>
+    </div>
+
+    <div class="case__block reveal">
+      <div class="case__label">Interested</div>
+      <div class="case__body">
+        <p>If you're a UPSC aspirant who wants early access, or a mentor who wants to help shape how the AI scores, drop me a note.</p>
+        <div style="display:flex;gap:16px;margin-top:24px;flex-wrap:wrap">
+          <a href="mailto:daksh@genartml.com?subject=Evoluter%20beta%20access" class="btn btn--primary">Request beta access <span class="arrow">↗</span></a>
+          <a href="../book.html" class="btn btn--ghost">Talk to me about it <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__respect">
+    <span>You made it this far. Respect.</span>
+    <a href="#top" class="footer__up">↑ Back to the beginning</a>
+  </div>
+  <div class="footer__huge">Let's<br><em>build.</em></div>
+  <div class="footer__grid">
+    <div class="footer__col">
+      <div class="footer__mark">Daksh Suthar</div>
+      <div class="footer__tag">Founder · Builder · Thinker</div>
+      <div class="footer__tag" style="margin-top:8px">daksh@genartml.com</div>
+    </div>
+    <div class="footer__col"><h4>Site</h4><a href="./">Work</a><a href="../about.html">About</a><a href="../journal/">Journal</a><a href="../now.html">Now</a></div>
+    <div class="footer__col"><h4>Talk</h4><a href="../book.html">Book a meeting</a><a href="../ask.html">Ask a question</a><a href="../contact.html">Speaking / invite</a><a href="../contact.html">Partner with me</a></div>
+    <div class="footer__col"><h4>Elsewhere</h4><a href="https://linkedin.com/in/daksh-suthar" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://instagram.com/daksh.suthar" target="_blank" rel="noopener">Instagram ↗</a><a href="https://x.com/dakshsuthar" target="_blank" rel="noopener">X ↗</a><a href="https://youtube.com/@dakshsuthar" target="_blank" rel="noopener">YouTube ↗</a></div>
+  </div>
+  <div class="footer__base"><span>© 2026 Daksh Suthar</span><span>Handcrafted in Ahmedabad · Built to evolve</span></div>
+</footer>
+
+<div class="status" onclick="openCmd()"><span class="dot"></span><span>Building</span><span class="sep">·</span><span class="mo-hide"><span class="k">Now:</span> Extuter launch</span><span class="sep mo-hide">·</span><span id="statusClock">--:-- IST</span></div>
+<div class="kbd-hint">Try <kbd>⌘</kbd><kbd>K</kbd></div>
+
+<div class="cmd" id="cmd">
+  <div class="cmd__box">
+    <input class="cmd__input" id="cmdInput" placeholder="Search or jump to…" />
+    <div class="cmd__list" id="cmdList">
+      <a class="cmd__item" href="../index.html"><div class="cmd__icon">H</div><div class="cmd__name">Home</div><div class="cmd__sub">Top</div></a>
+      <a class="cmd__item" href="./"><div class="cmd__icon">W</div><div class="cmd__name">Work — all projects</div><div class="cmd__sub">01</div></a>
+      <a class="cmd__item" href="extuter.html"><div class="cmd__icon">E</div><div class="cmd__name">Extuter — launching soon</div><div class="cmd__sub">New</div></a>
+      <a class="cmd__item" href="genartml.html"><div class="cmd__icon">G</div><div class="cmd__name">Genartml — the studio</div><div class="cmd__sub">Live</div></a>
+      <a class="cmd__item" href="evoluter.html"><div class="cmd__icon">V</div><div class="cmd__name">Evoluter — UPSC prep</div><div class="cmd__sub">Beta</div></a>
+      <a class="cmd__item" href="../about.html"><div class="cmd__icon">A</div><div class="cmd__name">About Daksh</div><div class="cmd__sub">02</div></a>
+      <a class="cmd__item" href="../now.html"><div class="cmd__icon">N</div><div class="cmd__name">Right now</div><div class="cmd__sub">Live</div></a>
+      <a class="cmd__item" href="../journal/"><div class="cmd__icon">J</div><div class="cmd__name">Journal</div><div class="cmd__sub">Inside my head</div></a>
+      <a class="cmd__item" href="../book.html"><div class="cmd__icon">B</div><div class="cmd__name">Book a meeting</div><div class="cmd__sub">Calendar</div></a>
+      <a class="cmd__item" href="../ask.html"><div class="cmd__icon">?</div><div class="cmd__name">Ask Daksh</div><div class="cmd__sub">Anything</div></a>
+      <a class="cmd__item" href="../contact.html"><div class="cmd__icon">C</div><div class="cmd__name">Contact / Speaking</div><div class="cmd__sub">Direct</div></a>
+      <a class="cmd__item" href="mailto:daksh@genartml.com"><div class="cmd__icon">@</div><div class="cmd__name">Email Daksh</div><div class="cmd__sub">Mail</div></a>
+    </div>
+    <div class="cmd__foot"><span><kbd>↑</kbd><kbd>↓</kbd> Navigate</span><span><kbd>↵</kbd> Go</span><span><kbd>esc</kbd> Close</span></div>
+  </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

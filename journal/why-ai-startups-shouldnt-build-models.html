@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Why most AI startups shouldn't build AI models — Daksh Suthar</title>
+<meta name="description" content="Everyone wants to be OpenAI. Almost nobody should be. The unsexy path to building an AI company that actually survives." />
+<meta name="theme-color" content="#0A0A0A" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <a href="../index.html" class="nav__logo">Daksh<em>Suthar</em></a>
+  <div class="nav__links">
+    <a href="../work/">Work</a>
+    <a href="../about.html">About</a>
+    <a href="./" class="on">Journal</a>
+    <a href="../now.html">Now</a>
+  </div>
+  <div class="nav__right">
+    <a href="../book.html" class="nav__book"><span>Book a call</span><span class="arrow">→</span></a>
+    <button class="nav__menu" onclick="toggleMenu()" aria-label="Menu">Menu</button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../work/" onclick="toggleMenu()">Work <em>01</em></a>
+  <a href="../about.html" onclick="toggleMenu()">About <em>02</em></a>
+  <a href="./" onclick="toggleMenu()">Journal <em>03</em></a>
+  <a href="../now.html" onclick="toggleMenu()">Now <em>04</em></a>
+  <a href="../book.html" onclick="toggleMenu()">Book <em>05</em></a>
+</div>
+
+<article class="article" id="top">
+  <div class="article__meta">
+    <span class="article__cat">Building</span>
+    <span>Aug 12, 2026</span>
+    <span>6 min read</span>
+    <span>by Daksh Suthar</span>
+  </div>
+
+  <h1 class="article__title">Why most AI startups <em>shouldn't</em> build AI models.</h1>
+
+  <p class="article__lede">
+    Everyone wants to be OpenAI. Almost nobody should be. Here's the unsexy path to building an AI company that actually survives its second year.
+  </p>
+
+  <div class="article__body">
+    <p>Since I started Genartml, I've probably heard the same pitch fifty times: <em>&ldquo;We're building our own AI model, fine-tuned on our proprietary data, for [very specific vertical].&rdquo;</em> Every time, the founder says it with the same tone — half pride, half fear that someone else will do it first.</p>
+
+    <p>Nine times out of ten, I want to grab them by the shoulders and say: <strong>don't</strong>.</p>
+
+    <h2>What people mean when they say &ldquo;build a model&rdquo;</h2>
+
+    <p>Usually they mean one of three very different things, and they're using the same word for all of them:</p>
+
+    <ol>
+      <li>Training a foundation model from scratch. (Extremely expensive. Do not attempt.)</li>
+      <li>Fine-tuning an existing open-source model on custom data.</li>
+      <li>Doing serious prompt engineering + retrieval on top of GPT / Claude / Gemini.</li>
+    </ol>
+
+    <p>Only the third one is actually a startup-friendly move in 2026. And even calling it &ldquo;building a model&rdquo; is a stretch — it's building a <em>system</em> that uses a model.</p>
+
+    <h2>The trap</h2>
+
+    <p>Here's what happens to teams that go all-in on option 1 or 2 without needing to:</p>
+
+    <p>They spend eight months and a lot of money getting their model to be <em>almost</em> as good as GPT-4 was two years ago. Meanwhile the frontier lab just released a new model that's better than both — for cheaper API pricing than their own compute costs.</p>
+
+    <p>The team's competitive advantage evaporated overnight, and now they have a large training bill, a small team of ML engineers who feel demoralized, and no product.</p>
+
+    <blockquote>
+      The frontier labs are running at a speed that no vertical startup can match. If your moat is &ldquo;our model is slightly better than the general one&rdquo;, you don't have a moat — you have a lease.
+    </blockquote>
+
+    <h2>What actually works</h2>
+
+    <p>The AI companies that win — the ones I watch closely — do something less glamorous. They:</p>
+
+    <p><strong>1. Own a very specific workflow.</strong> Not &ldquo;AI for lawyers&rdquo;. <em>&ldquo;AI that drafts the specific NDA revision comment your senior partner would write, in your firm's voice, in 90 seconds.&rdquo;</em> That's a workflow. That's defensible.</p>
+
+    <p><strong>2. Own the last mile.</strong> Integrations. UI. Trust. Compliance. The unglamorous stuff that GPT can't build for you because it doesn't know your customer.</p>
+
+    <p><strong>3. Own the data loop.</strong> Every time a user corrects the output, you learn. Over a year, your prompts + your retrieval + your workflow are 50% better because you've watched 10,000 users work with the tool. The frontier model helped — but the compounding is yours.</p>
+
+    <p><strong>4. Own the audience.</strong> If you're the trusted name in your niche, the switching cost isn't the tech — it's the relationship, the workflow, the integration debt.</p>
+
+    <h2>What we're doing at Genartml</h2>
+
+    <p>Every product we ship uses off-the-shelf frontier models. We don't train anything from scratch. What we do is spend obscene amounts of time on <strong>the workflow around the model</strong> — the retrieval, the prompt strategy, the fallback behavior, the UI, the handoff to humans when the model isn't confident.</p>
+
+    <p>That work compounds. The frontier model changes underneath us every six months, and we mostly just get better for free.</p>
+
+    <p>Same with Extuter. The AI companion isn't &ldquo;our custom model&rdquo;. It's a very carefully engineered system that uses Claude and GPT for different tasks, with retrieval over the JEE/NEET syllabus, with a mistake-memory layer that's ours, with a UX built for 2 AM study sessions. That's the real product.</p>
+
+    <h2>When you actually should build a model</h2>
+
+    <p>There are cases. If you're:</p>
+
+    <ul>
+      <li>Working with data the frontier labs will never see (regulated healthcare, defense, physical robotics)</li>
+      <li>Optimizing for latency or cost in a way that requires local inference at extreme scale</li>
+      <li>Building for a language or domain the general models are genuinely bad at</li>
+    </ul>
+
+    <p>…then yes. Fine-tune. Sometimes even train.</p>
+
+    <p>But if you're building for the general knowledge worker, the general SMB, the general consumer — you're competing with the labs. And they're better at building models than you are, by a factor no runway can fix.</p>
+
+    <h2>The one-line version</h2>
+
+    <p><strong>Use their models. Build your moat somewhere else.</strong></p>
+
+    <p>Most founders resist this because it feels less impressive. &ldquo;We use GPT with clever prompting&rdquo; doesn't sound like a startup. Fine — don't say it in your pitch deck. But build it that way anyway, and be here to laugh about it in three years.</p>
+
+    <div class="article__end">
+      <span>Written in Ahmedabad · 08 · 2026</span>
+      <a href="./" style="color:var(--ink-3)">← All entries</a>
+    </div>
+  </div>
+</article>
+
+<section class="section" style="border-top:1px solid var(--line);text-align:center;background:var(--bg-2)">
+  <h2 style="font-family:var(--serif);font-size:clamp(36px,5vw,64px);line-height:1;letter-spacing:-0.02em;margin-bottom:24px">Want to talk about this?</h2>
+  <p style="color:var(--ink-2);margin-bottom:40px">Book a call. I'll disagree with myself in real time if you push me.</p>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+    <a href="../book.html" class="btn btn--primary">Book a call <span class="arrow">→</span></a>
+    <a href="../ask.html" class="btn btn--ghost">Ask instead <span class="arrow">↗</span></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__respect">
+    <span>You made it this far. Respect.</span>
+    <a href="#top" class="footer__up">↑ Back to the top</a>
+  </div>
+  <div class="footer__huge">Let's<br><em>build.</em></div>
+  <div class="footer__grid">
+    <div class="footer__col">
+      <div class="footer__mark">Daksh Suthar</div>
+      <div class="footer__tag">Founder · Builder · Thinker</div>
+      <div class="footer__tag" style="margin-top:8px">daksh@genartml.com</div>
+    </div>
+    <div class="footer__col"><h4>Site</h4><a href="../work/">Work</a><a href="../about.html">About</a><a href="./">Journal</a><a href="../now.html">Now</a></div>
+    <div class="footer__col"><h4>Talk</h4><a href="../book.html">Book a meeting</a><a href="../ask.html">Ask a question</a><a href="../contact.html">Speaking / invite</a><a href="../contact.html">Partner with me</a></div>
+    <div class="footer__col"><h4>Elsewhere</h4><a href="https://linkedin.com/in/daksh-suthar" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://instagram.com/daksh.suthar" target="_blank" rel="noopener">Instagram ↗</a><a href="https://x.com/dakshsuthar" target="_blank" rel="noopener">X ↗</a><a href="https://youtube.com/@dakshsuthar" target="_blank" rel="noopener">YouTube ↗</a></div>
+  </div>
+  <div class="footer__base"><span>© 2026 Daksh Suthar</span><span>Handcrafted in Ahmedabad · Built to evolve</span></div>
+</footer>
+
+<div class="status" onclick="openCmd()"><span class="dot"></span><span>Building</span><span class="sep">·</span><span class="mo-hide"><span class="k">Now:</span> Extuter launch</span><span class="sep mo-hide">·</span><span id="statusClock">--:-- IST</span></div>
+<div class="kbd-hint">Try <kbd>⌘</kbd><kbd>K</kbd></div>
+
+<div class="cmd" id="cmd">
+  <div class="cmd__box">
+    <input class="cmd__input" id="cmdInput" placeholder="Search or jump to…" />
+    <div class="cmd__list" id="cmdList">
+      <a class="cmd__item" href="../index.html"><div class="cmd__icon">H</div><div class="cmd__name">Home</div><div class="cmd__sub">Top</div></a>
+      <a class="cmd__item" href="../work/"><div class="cmd__icon">W</div><div class="cmd__name">Work — all projects</div><div class="cmd__sub">01</div></a>
+      <a class="cmd__item" href="../work/extuter.html"><div class="cmd__icon">E</div><div class="cmd__name">Extuter — launching soon</div><div class="cmd__sub">New</div></a>
+      <a class="cmd__item" href="../work/genartml.html"><div class="cmd__icon">G</div><div class="cmd__name">Genartml — the studio</div><div class="cmd__sub">Live</div></a>
+      <a class="cmd__item" href="../work/evoluter.html"><div class="cmd__icon">V</div><div class="cmd__name">Evoluter — UPSC prep</div><div class="cmd__sub">Beta</div></a>
+      <a class="cmd__item" href="../about.html"><div class="cmd__icon">A</div><div class="cmd__name">About Daksh</div><div class="cmd__sub">02</div></a>
+      <a class="cmd__item" href="../now.html"><div class="cmd__icon">N</div><div class="cmd__name">Right now</div><div class="cmd__sub">Live</div></a>
+      <a class="cmd__item" href="./"><div class="cmd__icon">J</div><div class="cmd__name">Journal</div><div class="cmd__sub">Inside my head</div></a>
+      <a class="cmd__item" href="../book.html"><div class="cmd__icon">B</div><div class="cmd__name">Book a meeting</div><div class="cmd__sub">Calendar</div></a>
+      <a class="cmd__item" href="../ask.html"><div class="cmd__icon">?</div><div class="cmd__name">Ask Daksh</div><div class="cmd__sub">Anything</div></a>
+      <a class="cmd__item" href="../contact.html"><div class="cmd__icon">C</div><div class="cmd__name">Contact / Speaking</div><div class="cmd__sub">Direct</div></a>
+      <a class="cmd__item" href="mailto:daksh@genartml.com"><div class="cmd__icon">@</div><div class="cmd__name">Email Daksh</div><div class="cmd__sub">Mail</div></a>
+    </div>
+    <div class="cmd__foot"><span><kbd>↑</kbd><kbd>↓</kbd> Navigate</span><span><kbd>↵</kbd> Go</span><span><kbd>esc</kbd> Close</span></div>
+  </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Extuter — AI learning companion for JEE &amp; NEET</title>
+<meta name="description" content="Extuter is an AI learning companion built for JEE and NEET aspirants. Launching October 2026. Join the waitlist." />
+<meta name="theme-color" content="#0A0A0A" />
+<meta property="og:title" content="Extuter — Launching Soon" />
+<meta property="og:description" content="An AI learning companion for JEE &amp; NEET aspirants. Not another question bank." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <a href="../index.html" class="nav__logo">Daksh<em>Suthar</em></a>
+  <div class="nav__links">
+    <a href="./" class="on">Work</a>
+    <a href="../about.html">About</a>
+    <a href="../journal/">Journal</a>
+    <a href="../now.html">Now</a>
+  </div>
+  <div class="nav__right">
+    <a href="../book.html" class="nav__book"><span>Book a call</span><span class="arrow">→</span></a>
+    <button class="nav__menu" onclick="toggleMenu()" aria-label="Menu">Menu</button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="./" onclick="toggleMenu()">Work <em>01</em></a>
+  <a href="../about.html" onclick="toggleMenu()">About <em>02</em></a>
+  <a href="../journal/" onclick="toggleMenu()">Journal <em>03</em></a>
+  <a href="../now.html" onclick="toggleMenu()">Now <em>04</em></a>
+  <a href="../book.html" onclick="toggleMenu()">Book <em>05</em></a>
+</div>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="extuter-hero" id="top">
+  <div class="extuter-hero__badge">
+    <span class="d"></span>
+    Launching Oct 2026
+  </div>
+
+  <h1 class="extuter-hero__title">Extuter.<em>Study, not survived.</em></h1>
+
+  <p class="extuter-hero__sub">
+    An AI learning companion for JEE and NEET aspirants. Not another question bank — a study partner that <em>pays attention</em>.
+  </p>
+
+  <div class="extuter-hero__ctas">
+    <a href="#waitlist" class="btn btn--primary">Join the waitlist <span class="arrow">→</span></a>
+    <a href="#what" class="btn btn--ghost">See what it does <span class="arrow">↓</span></a>
+  </div>
+
+  <div class="countdown" id="countdown">
+    <div class="countdown__unit"><div class="countdown__n" id="cd-d">00</div><div class="countdown__l">Days</div></div>
+    <div class="countdown__unit"><div class="countdown__n" id="cd-h">00</div><div class="countdown__l">Hours</div></div>
+    <div class="countdown__unit"><div class="countdown__n" id="cd-m">00</div><div class="countdown__l">Minutes</div></div>
+    <div class="countdown__unit"><div class="countdown__n" id="cd-s">00</div><div class="countdown__l">Seconds</div></div>
+  </div>
+</section>
+
+<!-- ═══════════════ WHAT ═══════════════ -->
+<section class="section" id="what">
+  <div class="section__head reveal">
+    <div class="section__label">01 — What Extuter is</div>
+    <div class="section__label" style="color:var(--ink-2)">Read: five minutes</div>
+  </div>
+
+  <div style="max-width:720px;margin:0 auto">
+    <p style="font-family:var(--serif);font-size:clamp(28px,3.6vw,44px);line-height:1.2;letter-spacing:-0.02em;color:var(--ink);margin-bottom:32px" class="reveal">
+      Every JEE and NEET aspirant is drowning in the same thing: <em style="color:var(--ink-2)">more content</em>. More coaching, more mock tests, more PDFs, more &ldquo;top 50 problem&rdquo; lists.
+    </p>
+    <p style="font-size:var(--s-3);color:var(--ink-2);line-height:1.7;margin-bottom:24px" class="reveal">
+      What almost no student has is <strong style="color:var(--ink)">a study partner who actually knows them</strong> — where they're weak, what they got wrong last week, which chapter they've been avoiding, and how to fix it before Sunday's test.
+    </p>
+    <p style="font-size:var(--s-3);color:var(--ink-2);line-height:1.7;margin-bottom:24px" class="reveal">
+      Extuter is that partner. It watches how you solve, notices what you skip, tracks the mistakes you keep repeating, and quietly builds a study plan that adapts every day. No dashboards to check. No streaks to guilt-trip you. Just <strong style="color:var(--ink)">the next right thing to do</strong>.
+    </p>
+    <p style="font-size:var(--s-3);color:var(--ink-2);line-height:1.7" class="reveal">
+      We're building it because I remember what this preparation felt like. I don't want another kid to spend twelve hours a day feeling behind on something they can't even name.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════ FEATURES ═══════════════ -->
+<section class="section" style="padding-top:0">
+  <div class="section__head reveal">
+    <div class="section__label">02 — What it does</div>
+    <div class="section__label" style="color:var(--ink-2)">Six pieces, one flow</div>
+  </div>
+
+  <div class="feat-grid">
+    <div class="feat-card">
+      <div class="feat-card__n">01</div>
+      <h3 class="feat-card__title">Adaptive daily plan</h3>
+      <p class="feat-card__body">Every morning, Extuter tells you exactly what to study, in what order, for how long. Miss a day? It re-plans. Ace a chapter? It moves on.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card__n">02</div>
+      <h3 class="feat-card__title">Mistake memory</h3>
+      <p class="feat-card__body">Every wrong answer is remembered — not the question, the <em>reason</em>. If you keep confusing s-block reactivity, it'll surface until you don't.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card__n">03</div>
+      <h3 class="feat-card__title">Ask, don't search</h3>
+      <p class="feat-card__body">Stuck at 2 AM? Explain in your own words. Extuter answers in your syllabus context, with the exact concept your NCERT chapter uses.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card__n">04</div>
+      <h3 class="feat-card__title">Weekly mock, honest score</h3>
+      <p class="feat-card__body">Full-syllabus tests every week. Real NTA-style scoring. Detailed breakdown of where you lost marks and — more importantly — <em>why</em>.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card__n">05</div>
+      <h3 class="feat-card__title">Parent view (opt-in)</h3>
+      <p class="feat-card__body">Your parents see honest progress, not vanity streaks. Optional. Off by default. Because you're 17 and it's your account.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card__n">06</div>
+      <h3 class="feat-card__title">Built for offline India</h3>
+      <p class="feat-card__body">Works on 3G. Under 40 MB. Downloads your daily plan overnight so your morning study doesn't wait on a signal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TIMELINE ═══════════════ -->
+<section class="section" style="background:var(--bg-2)">
+  <div class="section__head reveal">
+    <div class="section__label">03 — Timeline</div>
+    <div class="section__label" style="color:var(--ink-2)">Public launch: Oct 3, 2026</div>
+  </div>
+
+  <div class="timeline reveal" style="max-width:720px">
+    <div class="timeline__row"><span class="timeline__year">Q1 · 26</span><span class="timeline__text">Idea. First conversations with coaching center teachers.</span></div>
+    <div class="timeline__row"><span class="timeline__year">Q2 · 26</span><span class="timeline__text">Private alpha with <em>50 students</em> in Ahmedabad.</span></div>
+    <div class="timeline__row"><span class="timeline__year">Q3 · 26</span><span class="timeline__text">Closed beta. Content coverage: JEE Main full syllabus.</span></div>
+    <div class="timeline__row now"><span class="timeline__year">Now</span><span class="timeline__text">Beta: <em>500 students</em>. Adding NEET syllabus. Iterating on the mistake-memory engine.</span></div>
+    <div class="timeline__row"><span class="timeline__year">Oct '26</span><span class="timeline__text">Public launch. Free for the first 10,000 waitlist signups.</span></div>
+  </div>
+</section>
+
+<!-- ═══════════════ WAITLIST ═══════════════ -->
+<section class="waitlist" id="waitlist">
+  <div class="waitlist__wrap" id="waitlistWrap">
+    <h2>Get it before <em>everyone else.</em></h2>
+    <p>First 10,000 waitlist signups get Extuter free for the full JEE/NEET cycle. One email, that's it — no marketing junk.</p>
+    <form class="waitlist__form" id="waitlistForm">
+      <input type="email" placeholder="you@email.com" required autocomplete="email" />
+      <button type="submit">Join waitlist</button>
+      <!-- Honeypot: bots fill hidden text fields, humans don't. Web3Forms silently drops these. -->
+      <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+    </form>
+    <div class="waitlist__count"><strong id="waitlistCount">1,247</strong> aspirants on the list</div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="footer__respect">
+    <span>You made it this far. Respect.</span>
+    <a href="#top" class="footer__up">↑ Back to the beginning</a>
+  </div>
+
+  <div class="footer__huge">Let's<br><em>build.</em></div>
+
+  <div class="footer__grid">
+    <div class="footer__col">
+      <div class="footer__mark">Daksh Suthar</div>
+      <div class="footer__tag">Founder · Builder · Thinker</div>
+      <div class="footer__tag" style="margin-top:8px">daksh@genartml.com</div>
+    </div>
+    <div class="footer__col">
+      <h4>Site</h4>
+      <a href="./">Work</a>
+      <a href="../about.html">About</a>
+      <a href="../journal/">Journal</a>
+      <a href="../now.html">Now</a>
+    </div>
+    <div class="footer__col">
+      <h4>Talk</h4>
+      <a href="../book.html">Book a meeting</a>
+      <a href="../ask.html">Ask a question</a>
+      <a href="../contact.html">Speaking / invite</a>
+      <a href="../contact.html">Partner with me</a>
+    </div>
+    <div class="footer__col">
+      <h4>Elsewhere</h4>
+      <a href="https://linkedin.com/in/daksh-suthar" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://instagram.com/daksh.suthar" target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="https://x.com/dakshsuthar" target="_blank" rel="noopener">X ↗</a>
+      <a href="https://youtube.com/@dakshsuthar" target="_blank" rel="noopener">YouTube ↗</a>
+    </div>
+  </div>
+
+  <div class="footer__base">
+    <span>© 2026 Daksh Suthar</span>
+    <span>Handcrafted in Ahmedabad · Built to evolve</span>
+  </div>
+</footer>
+
+<div class="status" onclick="openCmd()">
+  <span class="dot"></span>
+  <span>Building</span>
+  <span class="sep">·</span>
+  <span class="mo-hide"><span class="k">Now:</span> Extuter launch</span>
+  <span class="sep mo-hide">·</span>
+  <span id="statusClock">--:-- IST</span>
+</div>
+
+<div class="kbd-hint">Try <kbd>⌘</kbd><kbd>K</kbd></div>
+
+<div class="cmd" id="cmd">
+  <div class="cmd__box">
+    <input class="cmd__input" id="cmdInput" placeholder="Search or jump to…" />
+    <div class="cmd__list" id="cmdList">
+      <a class="cmd__item" href="../index.html"><div class="cmd__icon">H</div><div class="cmd__name">Home</div><div class="cmd__sub">Top</div></a>
+      <a class="cmd__item" href="./"><div class="cmd__icon">W</div><div class="cmd__name">Work — all projects</div><div class="cmd__sub">01</div></a>
+      <a class="cmd__item" href="extuter.html"><div class="cmd__icon">E</div><div class="cmd__name">Extuter — launching soon</div><div class="cmd__sub">New</div></a>
+      <a class="cmd__item" href="genartml.html"><div class="cmd__icon">G</div><div class="cmd__name">Genartml — the studio</div><div class="cmd__sub">Live</div></a>
+      <a class="cmd__item" href="evoluter.html"><div class="cmd__icon">V</div><div class="cmd__name">Evoluter — UPSC prep</div><div class="cmd__sub">Beta</div></a>
+      <a class="cmd__item" href="../about.html"><div class="cmd__icon">A</div><div class="cmd__name">About Daksh</div><div class="cmd__sub">02</div></a>
+      <a class="cmd__item" href="../now.html"><div class="cmd__icon">N</div><div class="cmd__name">Right now</div><div class="cmd__sub">Live</div></a>
+      <a class="cmd__item" href="../journal/"><div class="cmd__icon">J</div><div class="cmd__name">Journal</div><div class="cmd__sub">Inside my head</div></a>
+      <a class="cmd__item" href="../book.html"><div class="cmd__icon">B</div><div class="cmd__name">Book a meeting</div><div class="cmd__sub">Calendar</div></a>
+      <a class="cmd__item" href="../ask.html"><div class="cmd__icon">?</div><div class="cmd__name">Ask Daksh</div><div class="cmd__sub">Anything</div></a>
+      <a class="cmd__item" href="../contact.html"><div class="cmd__icon">C</div><div class="cmd__name">Contact / Speaking</div><div class="cmd__sub">Direct</div></a>
+      <a class="cmd__item" href="mailto:daksh@genartml.com"><div class="cmd__icon">@</div><div class="cmd__name">Email Daksh</div><div class="cmd__sub">Mail</div></a>
+    </div>
+    <div class="cmd__foot">
+      <span><kbd>↑</kbd><kbd>↓</kbd> Navigate</span>
+      <span><kbd>↵</kbd> Go</span>
+      <span><kbd>esc</kbd> Close</span>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

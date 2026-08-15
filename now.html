@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Now — Daksh Suthar</title>
+<meta name="description" content="What Daksh is actually working on right now. Updated weekly." />
+<meta name="theme-color" content="#0A0A0A" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav__logo">Daksh<em>Suthar</em></a>
+  <div class="nav__links">
+    <a href="work/">Work</a>
+    <a href="about.html">About</a>
+    <a href="journal/">Journal</a>
+    <a href="now.html" class="on">Now</a>
+  </div>
+  <div class="nav__right">
+    <a href="book.html" class="nav__book"><span>Book a call</span><span class="arrow">→</span></a>
+    <button class="nav__menu" onclick="toggleMenu()" aria-label="Menu">Menu</button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="work/" onclick="toggleMenu()">Work <em>01</em></a>
+  <a href="about.html" onclick="toggleMenu()">About <em>02</em></a>
+  <a href="journal/" onclick="toggleMenu()">Journal <em>03</em></a>
+  <a href="now.html" onclick="toggleMenu()">Now <em>04</em></a>
+  <a href="book.html" onclick="toggleMenu()">Book <em>05</em></a>
+</div>
+
+<section class="page-hero" id="top">
+  <div class="page-hero__label">
+    <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--live);animation:pulse 2.4s infinite"></span>
+    04 — Right now
+  </div>
+  <h1 class="page-hero__title">Right<em>now.</em></h1>
+  <p class="page-hero__sub">
+    What I'm actually working on, reading, thinking about. This page is updated every week — usually Sundays. If it's more than a week stale, ping me and I'll fix it.
+  </p>
+</section>
+
+<section class="section now">
+  <div class="section__head reveal">
+    <div class="section__label">Building</div>
+    <div class="section__label" style="color:var(--ink-2)">Ordered by attention</div>
+  </div>
+
+  <div class="now__list">
+    <div class="now__row reveal">
+      <span class="now__num">01</span>
+      <span class="now__task">Shipping <em>Extuter</em> before the next JEE cycle kicks in.</span>
+      <span class="now__meta">This week</span>
+    </div>
+    <div class="now__row reveal">
+      <span class="now__num">02</span>
+      <span class="now__task">Scaling Genartml past its first ten client teams.</span>
+      <span class="now__meta">Ongoing</span>
+    </div>
+    <div class="now__row reveal">
+      <span class="now__num">03</span>
+      <span class="now__task">Rebuilding Evoluter's feedback engine from scratch.</span>
+      <span class="now__meta">Nights</span>
+    </div>
+    <div class="now__row reveal">
+      <span class="now__num">04</span>
+      <span class="now__task">Writing the first proper long-form piece for this journal.</span>
+      <span class="now__meta">Weekends</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-2)">
+  <div class="section__head reveal">
+    <div class="section__label">Consuming</div>
+    <div class="section__label" style="color:var(--ink-2)">Currently in rotation</div>
+  </div>
+
+  <div class="now__list">
+    <div class="now__row reveal">
+      <span class="now__num">→</span>
+      <span class="now__task">Reading <em>Zero to One</em> — Peter Thiel</span>
+      <span class="now__meta">Re-read</span>
+    </div>
+    <div class="now__row reveal">
+      <span class="now__num">→</span>
+      <span class="now__task">Watching <em>How to Start a Startup</em> — Sam Altman, Stanford CS183B</span>
+      <span class="now__meta">One lecture / week</span>
+    </div>
+    <div class="now__row reveal">
+      <span class="now__num">→</span>
+      <span class="now__task">Listening to <em>Acquired</em> — Ben Gilbert &amp; David Rosenthal</span>
+      <span class="now__meta">While walking</span>
+    </div>
+    <div class="now__row reveal">
+      <span class="now__num">→</span>
+      <span class="now__task">Thinking about how distribution engines get built in India</span>
+      <span class="now__meta">Notebook</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="text-align:center">
+  <div class="now__stamp" style="justify-content:center;margin-bottom:32px">
+    <span class="dot"></span>
+    <span>Last updated: Aug 15, 2026 · Live from Ahmedabad · <span id="clock">--:--</span> IST</span>
+  </div>
+  <p style="color:var(--ink-3);font-size:var(--s-2)">This page is inspired by <a href="https://nownownow.com" target="_blank" rel="noopener" style="color:var(--ink-2);border-bottom:1px solid var(--ink-4)">nownownow.com</a>.</p>
+</section>
+
+<footer class="footer">
+  <div class="footer__respect">
+    <span>You made it this far. Respect.</span>
+    <a href="#top" class="footer__up">↑ Back to the beginning</a>
+  </div>
+  <div class="footer__huge">Let's<br><em>build.</em></div>
+  <div class="footer__grid">
+    <div class="footer__col">
+      <div class="footer__mark">Daksh Suthar</div>
+      <div class="footer__tag">Founder · Builder · Thinker</div>
+      <div class="footer__tag" style="margin-top:8px">daksh@genartml.com</div>
+    </div>
+    <div class="footer__col"><h4>Site</h4><a href="work/">Work</a><a href="about.html">About</a><a href="journal/">Journal</a><a href="now.html">Now</a></div>
+    <div class="footer__col"><h4>Talk</h4><a href="book.html">Book a meeting</a><a href="ask.html">Ask a question</a><a href="contact.html">Speaking / invite</a><a href="contact.html">Partner with me</a></div>
+    <div class="footer__col"><h4>Elsewhere</h4><a href="https://linkedin.com/in/daksh-suthar" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://instagram.com/daksh.suthar" target="_blank" rel="noopener">Instagram ↗</a><a href="https://x.com/dakshsuthar" target="_blank" rel="noopener">X ↗</a><a href="https://youtube.com/@dakshsuthar" target="_blank" rel="noopener">YouTube ↗</a></div>
+  </div>
+  <div class="footer__base"><span>© 2026 Daksh Suthar</span><span>Handcrafted in Ahmedabad · Built to evolve</span></div>
+</footer>
+
+<div class="status" onclick="openCmd()"><span class="dot"></span><span>Building</span><span class="sep">·</span><span class="mo-hide"><span class="k">Now:</span> Extuter launch</span><span class="sep mo-hide">·</span><span id="statusClock">--:-- IST</span></div>
+<div class="kbd-hint">Try <kbd>⌘</kbd><kbd>K</kbd></div>
+
+<div class="cmd" id="cmd">
+  <div class="cmd__box">
+    <input class="cmd__input" id="cmdInput" placeholder="Search or jump to…" />
+    <div class="cmd__list" id="cmdList">
+      <a class="cmd__item" href="index.html"><div class="cmd__icon">H</div><div class="cmd__name">Home</div><div class="cmd__sub">Top</div></a>
+      <a class="cmd__item" href="work/"><div class="cmd__icon">W</div><div class="cmd__name">Work — all projects</div><div class="cmd__sub">01</div></a>
+      <a class="cmd__item" href="work/extuter.html"><div class="cmd__icon">E</div><div class="cmd__name">Extuter — launching soon</div><div class="cmd__sub">New</div></a>
+      <a class="cmd__item" href="work/genartml.html"><div class="cmd__icon">G</div><div class="cmd__name">Genartml — the studio</div><div class="cmd__sub">Live</div></a>
+      <a class="cmd__item" href="work/evoluter.html"><div class="cmd__icon">V</div><div class="cmd__name">Evoluter — UPSC prep</div><div class="cmd__sub">Beta</div></a>
+      <a class="cmd__item" href="about.html"><div class="cmd__icon">A</div><div class="cmd__name">About Daksh</div><div class="cmd__sub">02</div></a>
+      <a class="cmd__item" href="now.html"><div class="cmd__icon">N</div><div class="cmd__name">Right now</div><div class="cmd__sub">Live</div></a>
+      <a class="cmd__item" href="journal/"><div class="cmd__icon">J</div><div class="cmd__name">Journal</div><div class="cmd__sub">Inside my head</div></a>
+      <a class="cmd__item" href="book.html"><div class="cmd__icon">B</div><div class="cmd__name">Book a meeting</div><div class="cmd__sub">Calendar</div></a>
+      <a class="cmd__item" href="ask.html"><div class="cmd__icon">?</div><div class="cmd__name">Ask Daksh</div><div class="cmd__sub">Anything</div></a>
+      <a class="cmd__item" href="contact.html"><div class="cmd__icon">C</div><div class="cmd__name">Contact / Speaking</div><div class="cmd__sub">Direct</div></a>
+      <a class="cmd__item" href="mailto:daksh@genartml.com"><div class="cmd__icon">@</div><div class="cmd__name">Email Daksh</div><div class="cmd__sub">Mail</div></a>
+    </div>
+    <div class="cmd__foot"><span><kbd>↑</kbd><kbd>↓</kbd> Navigate</span><span><kbd>↵</kbd> Go</span><span><kbd>esc</kbd> Close</span></div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

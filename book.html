@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Book a meeting — Daksh Suthar</title>
+<meta name="description" content="Get on Daksh's calendar. Tell me what we're here to talk about — I read every submission." />
+<meta name="theme-color" content="#0A0A0A" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav__logo">Daksh<em>Suthar</em></a>
+  <div class="nav__links">
+    <a href="work/">Work</a>
+    <a href="about.html">About</a>
+    <a href="journal/">Journal</a>
+    <a href="now.html">Now</a>
+  </div>
+  <div class="nav__right">
+    <a href="book.html" class="nav__book on"><span>Book a call</span><span class="arrow">→</span></a>
+    <button class="nav__menu" onclick="toggleMenu()" aria-label="Menu">Menu</button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="work/" onclick="toggleMenu()">Work <em>01</em></a>
+  <a href="about.html" onclick="toggleMenu()">About <em>02</em></a>
+  <a href="journal/" onclick="toggleMenu()">Journal <em>03</em></a>
+  <a href="now.html" onclick="toggleMenu()">Now <em>04</em></a>
+  <a href="book.html" onclick="toggleMenu()">Book <em>05</em></a>
+</div>
+
+<!-- ═══════════════ PAGE HEADER ═══════════════ -->
+<section class="page-hero">
+  <div class="page-hero__label">
+    <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--live)"></span>
+    05 — Book a call
+  </div>
+  <h1 class="page-hero__title">Get on my calendar.<br><em>Once I know why.</em></h1>
+  <p class="page-hero__sub">
+    Tell me what you want to talk about. If there's a clear reason to meet, I'll see you there. I read every submission personally — usually within a few hours. Calendar syncs live with my Google Calendar, so what you see is what's actually free.
+  </p>
+</section>
+
+<!-- ═══════════════ BOOKING FLOW ═══════════════ -->
+<section class="section book" id="book">
+  <div class="book__wrap">
+
+    <div class="steps">
+      <span class="on" data-step="1"><span class="num">1</span>Topic</span>
+      <span data-step="2"><span class="num">2</span>Context</span>
+      <span data-step="3"><span class="num">3</span>Time</span>
+    </div>
+
+    <!-- STEP 1 — Topic gate -->
+    <div class="step-panel on" data-panel="1">
+      <div class="step-q">What do you want to talk about?</div>
+      <div class="chips" id="topicChips">
+        <button class="chip" data-topic="Business &amp; startups">Business &amp; startups</button>
+        <button class="chip" data-topic="AI &amp; technology">AI &amp; technology</button>
+        <button class="chip" data-topic="Product development">Product development</button>
+        <button class="chip" data-topic="Genartml services">Genartml services</button>
+        <button class="chip" data-topic="Extuter">Extuter</button>
+        <button class="chip" data-topic="Evoluter">Evoluter</button>
+        <button class="chip" data-topic="Partnership">Partnership</button>
+        <button class="chip" data-topic="Investment">Investment</button>
+        <button class="chip" data-topic="Speaking / event">Speaking / event</button>
+        <button class="chip" data-topic="Mentorship / advice">Mentorship / advice</button>
+        <button class="chip" data-topic="Something else">Something else</button>
+      </div>
+      <div class="step-actions">
+        <span></span>
+        <button class="btn btn--primary" id="step1Continue" onclick="goStep(2)">Continue <span class="arrow">→</span></button>
+      </div>
+    </div>
+
+    <!-- STEP 2 — Context -->
+    <div class="step-panel" data-panel="2">
+      <div class="step-q">Tell me more.</div>
+      <div class="field">
+        <label for="contextInput">What would you like to discuss?</label>
+        <textarea id="contextInput" placeholder="Tell me what you're building, what you need help with, or why you think we should talk. Be specific — vague requests get vague answers."></textarea>
+      </div>
+      <p style="color:var(--ink-4);font-family:var(--mono);font-size:var(--s-1);text-transform:uppercase;letter-spacing:.12em;margin-top:16px">This gets sent to me with your booking. Required.</p>
+      <div class="step-actions">
+        <button class="back" onclick="goStep(1)">← Back</button>
+        <button class="btn btn--primary" onclick="goStep(3)">See available times <span class="arrow">→</span></button>
+      </div>
+    </div>
+
+    <!-- STEP 3 — Cal.com embed (real calendar, real Google Calendar sync) -->
+    <div class="step-panel" data-panel="3">
+      <div class="step-q">Pick a time that works.</div>
+      <p style="color:var(--ink-2);margin-bottom:32px;font-size:var(--s-2);line-height:1.6">
+        Times are shown in <strong style="color:var(--ink)" id="tzHint">your local timezone</strong> — Cal.com auto-detects it. You can change it inside the calendar. I take calls 30, 45, or 60 minutes long — pick whichever fits.
+      </p>
+
+      <div class="cal-embed-wrap">
+        <div class="cal-embed-loading" id="cal-loader">
+          <div class="l"></div>
+          <span>Loading availability from Google Calendar…</span>
+        </div>
+        <div id="cal-inline" style="width:100%;height:100%;min-height:640px"></div>
+      </div>
+
+      <div class="step-actions">
+        <button class="back" onclick="goStep(2)">← Change topic or context</button>
+        <span style="font-family:var(--mono);font-size:var(--s-1);color:var(--ink-4);text-transform:uppercase;letter-spacing:.12em">
+          Powered by cal.com · Google Calendar synced
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="footer__respect">
+    <span>You made it this far. Respect.</span>
+    <a href="#top" class="footer__up">↑ Back to the beginning</a>
+  </div>
+
+  <div class="footer__huge">Let's<br><em>build.</em></div>
+
+  <div class="footer__grid">
+    <div class="footer__col">
+      <div class="footer__mark">Daksh Suthar</div>
+      <div class="footer__tag">Founder · Builder · Thinker</div>
+      <div class="footer__tag" style="margin-top:8px">daksh@genartml.com</div>
+    </div>
+    <div class="footer__col">
+      <h4>Site</h4>
+      <a href="work/">Work</a>
+      <a href="about.html">About</a>
+      <a href="journal/">Journal</a>
+      <a href="now.html">Now</a>
+    </div>
+    <div class="footer__col">
+      <h4>Talk</h4>
+      <a href="book.html">Book a meeting</a>
+      <a href="ask.html">Ask a question</a>
+      <a href="contact.html">Speaking / invite</a>
+      <a href="contact.html">Partner with me</a>
+    </div>
+    <div class="footer__col">
+      <h4>Elsewhere</h4>
+      <a href="https://linkedin.com/in/daksh-suthar" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://instagram.com/daksh.suthar" target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="https://x.com/dakshsuthar" target="_blank" rel="noopener">X ↗</a>
+      <a href="https://youtube.com/@dakshsuthar" target="_blank" rel="noopener">YouTube ↗</a>
+    </div>
+  </div>
+
+  <div class="footer__base">
+    <span>© 2026 Daksh Suthar</span>
+    <span>Handcrafted in Ahmedabad · Built to evolve</span>
+  </div>
+</footer>
+
+<div class="status" onclick="openCmd()">
+  <span class="dot"></span>
+  <span>Building</span>
+  <span class="sep">·</span>
+  <span class="mo-hide"><span class="k">Now:</span> Extuter launch</span>
+  <span class="sep mo-hide">·</span>
+  <span id="statusClock">--:-- IST</span>
+</div>
+
+<div class="kbd-hint">Try <kbd>⌘</kbd><kbd>K</kbd></div>
+
+<div class="cmd" id="cmd">
+  <div class="cmd__box">
+    <input class="cmd__input" id="cmdInput" placeholder="Search or jump to…" />
+    <div class="cmd__list" id="cmdList">
+      <a class="cmd__item" href="index.html"><div class="cmd__icon">H</div><div class="cmd__name">Home</div><div class="cmd__sub">Top</div></a>
+      <a class="cmd__item" href="work/"><div class="cmd__icon">W</div><div class="cmd__name">Work — all projects</div><div class="cmd__sub">01</div></a>
+      <a class="cmd__item" href="work/extuter.html"><div class="cmd__icon">E</div><div class="cmd__name">Extuter — launching soon</div><div class="cmd__sub">New</div></a>
+      <a class="cmd__item" href="work/genartml.html"><div class="cmd__icon">G</div><div class="cmd__name">Genartml — the studio</div><div class="cmd__sub">Live</div></a>
+      <a class="cmd__item" href="work/evoluter.html"><div class="cmd__icon">V</div><div class="cmd__name">Evoluter — UPSC prep</div><div class="cmd__sub">Beta</div></a>
+      <a class="cmd__item" href="about.html"><div class="cmd__icon">A</div><div class="cmd__name">About Daksh</div><div class="cmd__sub">02</div></a>
+      <a class="cmd__item" href="now.html"><div class="cmd__icon">N</div><div class="cmd__name">Right now</div><div class="cmd__sub">Live</div></a>
+      <a class="cmd__item" href="journal/"><div class="cmd__icon">J</div><div class="cmd__name">Journal</div><div class="cmd__sub">Inside my head</div></a>
+      <a class="cmd__item" href="book.html"><div class="cmd__icon">B</div><div class="cmd__name">Book a meeting</div><div class="cmd__sub">Calendar</div></a>
+      <a class="cmd__item" href="ask.html"><div class="cmd__icon">?</div><div class="cmd__name">Ask Daksh</div><div class="cmd__sub">Anything</div></a>
+      <a class="cmd__item" href="contact.html"><div class="cmd__icon">C</div><div class="cmd__name">Contact / Speaking</div><div class="cmd__sub">Direct</div></a>
+      <a class="cmd__item" href="mailto:daksh@genartml.com"><div class="cmd__icon">@</div><div class="cmd__name">Email Daksh</div><div class="cmd__sub">Mail</div></a>
+    </div>
+    <div class="cmd__foot">
+      <span><kbd>↑</kbd><kbd>↓</kbd> Navigate</span>
+      <span><kbd>↵</kbd> Go</span>
+      <span><kbd>esc</kbd> Close</span>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/booking.js"></script>
+<script>
+  // Fill in the user's detected timezone in the hint
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const el = document.getElementById('tzHint');
+    if (el && tz) el.textContent = tz.replace('_', ' ');
+  } catch (e) {}
+</script>
+</body>
+</html>
